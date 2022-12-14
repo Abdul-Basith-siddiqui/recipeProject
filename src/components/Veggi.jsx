@@ -13,21 +13,21 @@ function Veggi() {
   }, []);
 
   const getVeggie = async () => {
-    const check = localStorage.getItem("veggie");
+    //   const check = localStorage.getItem("veggie");
 
-    if (check) {
-      setVeggie(JSON.parse(check));
-    } else {
-      const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&tags=vegetarian`
-      ); //fecthing the api data form the api get request(end point) and the we need to attached the api key to the end point with ? and specify the number of the recipes we want to get
-      const data = await api.json(); //`await` is used to wait for the promise to be resolved and then we can use the data to convert it to json format
+    //   if (check) {
+    //     setVeggie(JSON.parse(check));
+    //   } else {
+    const api = await fetch(
+      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&tags=vegetarian`
+    ); //fecthing the api data form the api get request(end point) and the we need to attached the api key to the end point with ? and specify the number of the recipes we want to get
+    const data = await api.json(); //`await` is used to wait for the promise to be resolved and then we can use the data to convert it to json format
 
-      localStorage.setItem("veggie", JSON.stringify(data.recipes)); //if data is not there then we are seting into localStroage
+    //    localStorage.setItem("veggie", JSON.stringify(data.recipes)); //if data is not there then we are seting into localStroage
 
-      setVeggie(data.recipes);
-      console.log(data.recipes);
-    }
+    setVeggie(data.recipes);
+    console.log(data.recipes);
+    //  }
   };
   return (
     <div>

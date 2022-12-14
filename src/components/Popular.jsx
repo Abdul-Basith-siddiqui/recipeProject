@@ -12,22 +12,22 @@ function Popular() {
   }, []);
 
   const getPopular = async () => {
-    const check = localStorage.getItem("popular");
+    //   const check = localStorage.getItem("popular");
 
-    if (check) {
-      setPopular(JSON.parse(check));
-    } else {
-      const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10`
-      ); //fecthing the api data form the api get request(end point) and the we need to attached the api key to the end point with ? and specify the number of the recipes we want to get
-      const data = await api.json(); //`await` is used to wait for the promise to be resolved and then we can use the data to convert it to json format
+    //  if (check) {
+    //     setPopular(JSON.parse(check));
+    //   } else {
+    const api = await fetch(
+      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10`
+    ); //fecthing the api data form the api get request(end point) and the we need to attached the api key to the end point with ? and specify the number of the recipes we want to get
+    const data = await api.json(); //`await` is used to wait for the promise to be resolved and then we can use the data to convert it to json format
 
-      localStorage.setItem("popular", JSON.stringify(data.recipes)); //if data is not there then we are seting into localStroage
+    //    localStorage.setItem("popular", JSON.stringify(data.recipes)); //if data is not there then we are seting into localStroage
 
-      setPopular(data.recipes);
-      console.log(data); //{recipes: Array(10)}
-      console.log(data.recipes); //(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
-    }
+    setPopular(data.recipes);
+    console.log(data); //{recipes: Array(10)}
+    console.log(data.recipes); //(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+    // }
   };
 
   return (
