@@ -1,3 +1,31 @@
+# Recipe WebApp (React).... 
+
+**The Site For Healthy And Nutritious Food Recipes: 
+Find your everyday cooking inspiration on Recipe Website. Discover Veg recipes based on the food you love.
+
+React App
+Tech Stack:
+react Hooks, styled Components, Splide, SpldeSlide, @splidejs/react-splide/css, react-route-dom, react-icons, framer-motion , fontawesome/react-fontawesome, react-doms, API , CSS, CSS module, Git, npm**
+
+This is one of my projects which I made to learn the following:
+
+React (Fundamentals)
+API (For state management)
+styled Components
+react-routing
+react-Hooks
+And many react concepts 
+
+# Some of the Packages used...
+  react-icons
+⦁	framer-motion
+⦁	splidejs
+⦁	fontawesome
+⦁	styled-components
+⦁	react-router-dom
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
