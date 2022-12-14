@@ -9,20 +9,20 @@ react Hooks, styled Components, Splide, SpldeSlide, @splidejs/react-splide/css, 
 
 This is one of my projects which I made to learn the following:
 
-React (Fundamentals)
-API (For state management)
-styled Components
-react-routing
-react-Hooks
-And many react concepts 
+React (Fundamentals)\
+API (For state management)\
+styled Components\
+react-routing\
+react-Hooks\
+And many react concepts \
 
 # Some of the Packages used...
-  react-icons
-⦁	framer-motion
-⦁	splidejs
-⦁	fontawesome
-⦁	styled-components
-⦁	react-router-dom
+  react-icons\
+⦁	framer-motion\
+⦁	splidejs\
+⦁	fontawesome\
+⦁	styled-components\
+⦁	react-router-dom\
 
 
 
