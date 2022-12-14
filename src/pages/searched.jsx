@@ -9,7 +9,7 @@ const Searched = () => {
 
   const getSearched = async (name) => {
     const data = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=10&query=${name}`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=12&query=${name}`
     );
     const recipes = await data.json();
     setSearchedRecipes(recipes.results);
@@ -43,6 +43,10 @@ const Grid = styled.div`
 `;
 
 const Card = styled.div`
+  text-align: center;
+  &:hover {
+    box-shadow: 0 0 2px 1px white;
+  }
   img {
     width: 70%;
     border-radius: 2rem;
@@ -54,6 +58,9 @@ const Card = styled.div`
     text-align: center;
     padding: 1rem;
     font-size: 0.7rem;
+  }
+  @media (max-width: 768px) {
+    text-align: center;
   }
 `;
 

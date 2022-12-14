@@ -14,7 +14,7 @@ export default function Cuisine() {
     //      setCuisine(JSON.parse(check));
     //    } else {
     const data = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=10&cuisine=${name}`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=12&cuisine=${name}`
     );
     const recipesV = await data.json();
     console.log(recipesV);

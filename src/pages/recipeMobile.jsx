@@ -54,7 +54,7 @@ const RecipeM = () => {
           </div>
         )}
         {activeTab === "ingredients" && (
-          <div>
+          <div className="ingredientPadding">
             {details.extendedIngredients.map((ingredient) => (
               <li key={ingredient.id}>{ingredient.original}</li>
             ))}
@@ -138,6 +138,7 @@ const Button = styled.button`
   &:hover {
     background-color: #ff9e9e;
     color: white;
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
   }
 
   ${
@@ -159,9 +160,14 @@ const Info = styled.div`
     background: rgba(255, 255, 255, 0.5);
     padding: 0rem 1.4rem 0.5rem;
     margin-top: 1rem;
+    margin-right: 1rem;
     border-radius: 5px;
     list-style: none;
     display: block;
+
+    .ingredientPadding {
+      padding-right: 12rem;
+    }
 
     @media (max-width: 768px) {
       margin: 1rem;
